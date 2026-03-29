@@ -1,72 +1,163 @@
 # 🚀 Token Management System (Laravel)
 
-A full-stack web application built with Laravel for managing employee tokens, task tracking, and admin workflow.
+A full-stack web application built using Laravel for managing employee/service tokens with admin control, status tracking, and dashboard analytics.
 
 ---
 
 ## 📌 Features
 
-- 🔐 User Authentication (Login/Register)
-- 🧾 Token Creation & Management
-- ✏️ Edit / 🗑️ Delete Tokens
-- 👨‍💻 Admin Dashboard
-- 🔄 Status Update (Pending / In Progress / Completed)
-- 📊 Dashboard Analytics (Chart.js)
-- 🔍 Filter Tokens by Status
-- 🎨 Clean UI with Tailwind CSS
+* 🔐 User Authentication (Login / Register)
+* 🧾 Create, View, Edit, Delete Tokens
+* 👨‍💻 Admin Panel for managing all tokens
+* 🔄 Status Update (Pending / In Progress / Completed)
+* 📊 Dashboard with Charts (Chart.js)
+* 🔍 Filter Tokens by Status
+* 🎨 Clean UI using Tailwind CSS
+* 🔙 Navigation with Dashboard & Back buttons
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Backend: Laravel 12
-- Frontend: Blade + Tailwind CSS
-- Database: MySQL (XAMPP)
-- Charts: Chart.js
-- Version Control: Git & GitHub
+* Backend: Laravel 12 (PHP)
+* Frontend: Blade + Tailwind CSS
+* Database: MySQL (XAMPP)
+* Charts: Chart.js
+* Version Control: Git & GitHub
 
 ---
 
 ## 📂 Project Structure
 
-- Controllers → Business logic
-- Models → Database tables
-- Views → UI (Blade templates)
-- Routes → URL handling
+```
+app/            → Controllers, Models
+resources/views → UI (Blade templates)
+routes/         → Web routes
+database/       → Migrations
+public/         → Entry point
+```
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation & Setup
 
-1. Clone the repo:
+### 1️⃣ Clone the repository
+
 ```bash
-git clone https://github.com/YOUR-USERNAME/token-management-system.git
-cd token-management-system
-Install dependencies:
+git clone https://github.com/ab-rar-6024/Token-management-system.git
+cd Token-management-system
+```
+
+---
+
+### 2️⃣ Install dependencies
+
+```bash
 composer install
 npm install
-Setup environment:
+```
+
+---
+
+### 3️⃣ Setup environment
+
+```bash
 cp .env.example .env
 php artisan key:generate
-Configure database in .env
-Run migrations:
+```
+
+---
+
+### 4️⃣ Configure database
+
+Edit `.env` file:
+
+```env
+DB_CONNECTION=mysql
+DB_DATABASE=token_system
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+---
+
+### 5️⃣ Run migrations
+
+```bash
 php artisan migrate
-Start server:
+```
+
+---
+
+### 6️⃣ Run project
+
+```bash
 php artisan serve
 npm run dev
-📸 Screenshots
-Dashboard with charts 📊
-Token list & filtering
-Admin panel
-🚀 Future Improvements
-📤 Export to PDF/Excel
-🔔 Notifications system
-🌐 Deployment (Render / Vercel / Railway)
-📱 Mobile responsive UI
-👨‍💻 Author
+```
 
-Mohamed Abrar
+---
 
+## 🌐 Usage
+
+* Visit: `http://127.0.0.1:8000`
+* Register a user
+* Create tokens
+* Admin can update status
+* Dashboard shows analytics
+
+---
+
+## 📊 Dashboard Features
+
+* Total Tokens
+* Pending Tokens
+* Completed Tokens
+* Interactive Chart (Chart.js)
+* Clickable cards for filtering
+
+---
+
+## 👨‍💻 Admin Access
+
+To make a user admin:
+
+1. Open phpMyAdmin
+2. Go to `users` table
+3. Change:
+
+```
+role = admin
+```
+
+---
+
+## 📸 Screenshots (Add Later)
+
+* Dashboard 📊
+* Token List 📄
+* Admin Panel 👨‍💻
+
+---
+
+## 🚀 Future Improvements
+
+* 📤 Export to PDF / Excel
+* 🔔 Notification system
+* 📱 Mobile responsive UI
+* 🌐 Deploy to cloud (Render / Railway)
+
+---
+
+## 👤 Author
+
+**Mohamed Abrar**
 GitHub: https://github.com/ab-rar-6024
 
-⭐ If you like this project, give it a star!
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
+
+---
